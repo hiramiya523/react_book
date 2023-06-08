@@ -1,0 +1,15 @@
+# 公式かつ、slim imageかつ、安定バージョンかつ、debian
+FROM node:20.2.0-bullseye-slim
+
+ENV TZ Asia/Tokyo
+RUN apt-get update \
+  && apt-get upgrade -y \
+  && apt-get install -y --no-install-recommends \
+    vim git \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/*
+
+RUN npm i -g pnpm
+
+
+WORKDIR /home/node/react-front

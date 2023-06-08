@@ -1,0 +1,11 @@
+services:
+  front:
+    hostname: front-container
+    build:
+      context: ./docker/front
+      dockerfile: Dockerfile-front
+    tty: true
+    ports:
+      - 127.0.1.1:${FRONT_PUBLIC_PORT}:3000
+    volumes:
+      - ./src:/home/node
