@@ -8,6 +8,7 @@ services:
     ports:
       - 127.0.1.1:${FRONT_PUBLIC_PORT}:3000
     volumes:
+    # ユーザーのhomeディレクトリにマウントすると、bash_historyが生成されてうざい
       - ./src:/home/node
       - ./src/.bash_history:/home/.bash_history
       # - /home/node/.node_repl_history
