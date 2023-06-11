@@ -2,11 +2,11 @@ const Hello = () => {
   const onClick = () => {
     alert("Hello");
   }
-  const text = "Hello, React";
+  const text = "React";
 
   return (
     <div onClick={onClick}>
-      {text}
+      こんにちは、{text}さん。
     </div>
   )
 }
