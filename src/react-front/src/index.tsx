@@ -5,6 +5,7 @@ import './index.css';
 import Hello from './components/Hello';
 import Name from './components/Name';
 import reportWebVitals from './reportWebVitals';
+import Parent from './components/ContainerSample';
 import Message from './components/Message';
 
 const root = ReactDOM.createRoot(
@@ -16,6 +17,7 @@ root.render(
     <Hello />
     <Name />
     <Message />
+    <Parent />
   </React.StrictMode>
 );
 
